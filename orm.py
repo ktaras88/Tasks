@@ -1,8 +1,8 @@
 import sqlite3
 
 class Database:
-
-    def create_database(self, db_name):
+    
+    def __init__(self, db_name):
         self.conn = sqlite3.connect(db_name +'.db')
 
     def create_table(self, table_name, **col_name_types):
